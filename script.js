@@ -25,4 +25,5 @@ function buscar() {
       midia.html(`<iframe width="98%" height="350px" class="img" src="${busca.url}?autoplay=1&mute=1"></iframe>`)
     }
   }
+  
 }
