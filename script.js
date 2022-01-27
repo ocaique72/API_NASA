@@ -12,7 +12,7 @@ function buscar() {
   })
 
   function apiData(busca) {
-    const img   = $(".img");
+    const midia = $(".midia");
     const title = $(".titulo");
     const expli = $(".expli");
 
@@ -20,9 +20,9 @@ function buscar() {
     expli.html(`<h3>Explanation:</h3> ${busca.explanation}`);
 
     if (busca.media_type == 'image') {
-      img.html(`<img class="img" src="${busca.url}" width="98%" />`)
+      midia.html(`<img class="img" src="${busca.url}" width="98%" />`)
     } else {
-      img.html(`<iframe width="98%" height="350px" class="img" src="${busca.url}?autoplay=1&mute=1"></iframe>`)
+      midia.html(`<iframe width="98%" height="350px" class="img" src="${busca.url}?autoplay=1&mute=1"></iframe>`)
     }
   }
 }
