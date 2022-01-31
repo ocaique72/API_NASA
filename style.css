@@ -52,7 +52,7 @@ input{
   background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
 }
 
-.pesquisar{
+#pesquisar{
   width: 200px;
   height: 60px;
   line-height: 38px;
@@ -70,7 +70,7 @@ input{
   touch-action: manipulation;
 }
 
-.pesquisar:after {
+#pesquisar:after {
   --slice-0: inset(50% 50% 50% 50%);
   --slice-1: inset(80% -6px 0 0);
   --slice-2: inset(50% -6px 30% 0);
@@ -89,7 +89,7 @@ input{
   clip-path: var(--slice-0);
 }
 
-.pesquisar:hover:after {
+#pesquisar:hover:after {
   animation: 1s glitch;
   animation-timing-function: steps(2, end);
 }
@@ -142,8 +142,8 @@ input{
 }
 
 @media (min-width: 768px) {
-  .pesquisar,
-  .pesquisar:after {
+  #pesquisar,
+  #pesquisar:after {
     width: 200px;
     height: 60px;
   }
