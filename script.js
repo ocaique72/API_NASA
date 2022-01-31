@@ -1,4 +1,4 @@
-function buscar() {
+function pesquisar() {
   const api_key = "sBE2O2V210iiVSgtwi0OKBBeld98sF8opOxRpQeV";
   const data = $("#data").val();
 
@@ -11,18 +11,26 @@ function buscar() {
     
   })
 
-  function apiData(busca) {
+  function apiData(pesquisar) {
     const midia = $(".midia");
     const title = $(".titulo");
+    const autor = $(".autor");
     const expli = $(".expli");
 
-    title.html(busca.title);
-    expli.html(`<h3>Explanation:</h3> ${busca.explanation}`);
+    title.html(pesquisar.title);
+    expli.html(`<h3>Explanation:</h3> ${pesquisar.explanation}`);
+    autor.html(` ${pesquisar.copyright}`);
 
-    if (busca.media_type == 'image') {
-      midia.html(`<img class="img" src="${busca.url}" width="98%" />`)
+    if (pesquisar.copyright !== undefined) {
+      autor.text(`Copyright © ${pesquisar.copyright}`);
     } else {
-      midia.html(`<iframe width="98%" height="350px" class="img" src="${busca.url}?autoplay=1&mute=1"></iframe>`)
+      autor.text('No author');
+    }
+
+    if (pesquisar.media_type == 'image') {
+      midia.html(`<img class="img" src="${pesquisar.url}" width="98%" />`)
+    } else {
+      midia.html(`<iframe width="98%" height="350px" class="img" src="${pesquisar.url}?autoplay=1&mute=1"></iframe>`)
     }
   }
 }
