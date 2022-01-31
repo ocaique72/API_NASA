@@ -46,6 +46,10 @@ button {
   margin-left: 3%;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 input{
   width: 200px;
   height: 45px;
